@@ -69,7 +69,7 @@ public:
         return std::sqrt(p_im * p_im + p_re * p_re);
     }
 
-    bool CompareToComplex(const Complex<T> &b) const {
+    Complex<T> operator==(const Complex<T> &b) const {
         if (std::abs(this->p_re - b.p_re) < epsilon && std::abs(this->p_im - b.p_im) < epsilon) {
             return true;
         } else {
